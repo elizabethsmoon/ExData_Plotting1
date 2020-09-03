@@ -6,7 +6,7 @@ setwd("~/RStudioESM/Exploratory Data Week Projects/ExData_Plotting1")
 powerDT <- data.table::fread(input = "household_power_consumption.txt",
                              na.strings="?")
 
-# Format to Prevent Scientific Notatoin
+# Format to Prevent Scientific Notation
 
 powerDT[, Global_active_power := lapply(.SD, as.numeric), 
         .SDcols = c("Global_active_power")]
